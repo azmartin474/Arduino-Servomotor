@@ -33,5 +33,14 @@ for(angulo = 0; angulo < 180; angulo++){ //incrementa de 1 en 1
 servo.write(angulo); 
 delay(30); //Le damos un delay para que se espere en lo que pasa al siguiente ángulo. 30ms
 }
+//Como el primer for termina con angulo cerca de 180, el segundo debe comenzar desde ahí:
+for(angulo = 179; angulo >= 0; angulo--){ //disminuye de 1 en 1
+
+//No se lo hemos escrito al pin de salida. Hay que decirle al pin de salida que se lo ponga en ese ángulo.
+// Y eso lo vamos a hacer con la función servo.write
+
+servo.write(angulo); 
+delay(40); //Le damos un delay para que se espere en lo que pasa al siguiente ángulo. 30ms
+}
 
 }
